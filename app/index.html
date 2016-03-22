@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <title>Angular with webpack lol</title>
 </head>
-<body ng-app="app">
+<body ng-app="app" ng-controller='homeController'>
     <h1>Angular + webpack</h1>
-    <h2>{{666 * 666}}</h2>
+    <h2>{{cos}}</h2>
+    <table class="table table-striped">
+        
+        <tbody>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Description</th>
+            </tr>         
+            <tr ng-repeat = "movie in movies" >
+                <td>{{$index + 1 }}</td>    
+            	<td>{{movie.title}}</td> 
+                <td>{{movie.desc}}</td>
+            </tr>      
+        </tbody>
+    </table>
     <script src="bundle.js"></script>
     
 </body>

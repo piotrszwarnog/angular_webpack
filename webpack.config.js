@@ -5,12 +5,11 @@ module.exports = {
         path: __dirname + '/app',
         filename: 'bundle.js'
     },
-    
     module: {
-    loaders: [
-      {test: /\.js$/, loader: 'babel', exclude: /node_modules/},
-      {test: /\.css$/, loader: 'style!css', exclude: /node_modules/}
-    ]
+      loaders: [
+        {test: /\.js$/, loader: 'babel', exclude: /node_modules/},
+        {test: /\.css$/, loader: 'style!css'},
+        {test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/, loader: 'file'}
+      ]
   }
-  
 };
